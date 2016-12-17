@@ -29,10 +29,10 @@ Please visit [official fpm wiki](https://github.com/jordansissel/fpm/wiki) to re
 
 ```bash
 # simple
-docker run --rm -v $(pwd):/build docker-fpm -s dir -t rpm -n my-rpm-package -v v1.0 ./
+docker run --rm -v $(pwd):/build pgrzesiecki/docker-fpm -s dir -t rpm -n my-rpm-package -v v1.0 ./
 
 #more advanced
-docker run --rm -v $(pwd):/build docker-fpm -s dir -t rpm -n my-rpm-package -v v1.0 --after-install scripts/run-after-install.sh -d g++ dir1 dir2 file.log other-filze.sh
+docker run --rm -v $(pwd):/build pgrzesiecki/docker-fpm -s dir -t rpm -n my-rpm-package -v v1.0 --after-install scripts/run-after-install.sh -d g++ dir1 dir2 file.log other-filze.sh
 ```
 
 Remember to mount `/build` volume with files to pack.
