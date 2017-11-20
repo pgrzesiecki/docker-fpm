@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum update
+RUN yum update -y
 
 RUN yum install -y ruby \
 	gcc-c++ make automake autoconf zlib-devel apr-devel apr-util-devel \
